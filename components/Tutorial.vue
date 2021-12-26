@@ -1,6 +1,9 @@
 <!-- Please remove this file from your project -->
 <template>
   <div>
+    <h1 class="text-3xl font-bold underline">
+      Hello world!
+    </h1>
     <h1>{{ count }}</h1>
     <button @click="incre">Increment</button>
     <button @click="decre"> Decrement</button>
