@@ -1,5 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  env: {
+    strapiBaseUri: process.env.API_URL || 'http://localhost:1337'
+  },
   head: {
     title: 'nuxt-rendered',
     htmlAttrs: {
@@ -37,7 +40,16 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/apollo'
   ],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.BACKEND_URL || 'http://localhost:1337/graphql'
+      }
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

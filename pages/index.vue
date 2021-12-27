@@ -1,5 +1,8 @@
 <template>
-  <Tutorial />
+ <div>
+   <Navbar />
+   <Blog />
+ </div>
 </template>
 
 <script lang="ts">
